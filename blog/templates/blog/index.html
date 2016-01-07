@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if blogs %}
+        <ur>
+            {% for blog in blogs %}
+                <li>{{ blog.article }}</li>
+            {% endfor %}
+        </ur>
+    {% else %}
+        <p>No blog are available.</p>
+    {% endif %}
+</body>
+</html>
+
+<!--
+li: 列表
+a: 连接
+ -->
