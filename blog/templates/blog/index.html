@@ -5,10 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+<div>
+    <h1>czqsole的Blog</h1>
+</div>
     {% if blogs %}
         <ur>
             {% for blog in blogs %}
-                <li>{{ blog.article }}</li>
+                <li>
+                    {{ blog.title }}
+                    <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
+                </li>
             {% endfor %}
         </ur>
     {% else %}
