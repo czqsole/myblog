@@ -21,7 +21,36 @@
             {% for blog in blogs %}
                 <li class="list-group-item">
                     <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
-                </li>
+
+
+                <div id="blogs">
+                    <header>
+
+                    </header>
+                    <div class="entry-content">
+                        <p>
+                            {{ blog.article }}
+                        </p>
+                    </div>
+                    <footer>
+                        <div class="entry-info">
+			                <span class="entry-date">
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+				                    2016年1月10日
+			                </span>
+                            <span class="author vcard">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		 		                admin
+ 			                </span>
+		  	                <span class="comments-link">
+				                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+			                </span>
+
+		                 </div>
+                    </footer>
+                </div>
+
+                    </li>
             {% endfor %}
 
         {% else %}
