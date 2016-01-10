@@ -16,3 +16,6 @@ def detail(request, blog_id):
     except Blog.DoesNotExist:
         raise Http404("Blog does not exit")
     return render(request, 'blog/detail.html', {'blog': blog})
+
+def create_blog(request):
+    return render(request, 'blog/create.html')
