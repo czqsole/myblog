@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/blog/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <h1>czqsole的Blog</h1>
+</div>
+
+<nav class="nav nav-primary">
+    <div class="container">
+    <ul class="nav nav-pills">
+         <li role="presentation" class="active"><a href="#">Home</a></li>
+         <li role="presentation"><a href="#">Profile</a></li>
+         <li role="presentation"><a href="#">Messages</a></li>
+         <li role="presentation"><a href="#">About me</a></li>
+    </ul>
+    </div>
+</nav>
+
+
+		<div id="path">
+            {% block path %}{% endblock %}
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    
+
+    <center>
+     <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-github"></a>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>
+            </p>
+            <p>Powered by <a href="#">czqsole</a>. Copyright &copy; 2016. [<a href="/manage/" target="_blank">Manage</a>]</p>
+            <p><a href="" target="_blank">www.czqsole.com</a>. All rights reserved.</p>
+         </div>
+     </nav>
+    </center>
+
+</body>
+</html>

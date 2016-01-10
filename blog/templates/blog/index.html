@@ -1,10 +1,43 @@
+{% extends 'base.html' %}
+
+{% block path %}
+<div class="container">
+    <div class="breadcrumb">
+        当前位置&nbsp;：&nbsp;首页
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+        {% if blogs %}
+
+            {% for blog in blogs %}
+                <li class="list-group-item">
+                    <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
+                </li>
+            {% endfor %}
+
+        {% else %}
+         <p>No blog are available.</p>
+        {% endif %}
+    </ul>
+</div>
+{% endblock %}
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    &lt;!&ndash; 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ &ndash;&gt;
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="UTF-8">
@@ -13,21 +46,21 @@
 
     <title>Starter Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
+    &lt;!&ndash; Bootstrap core CSS &ndash;&gt;
     <link href="static/blog/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <!--<link href="starter-template.css" rel="stylesheet">-->
+    &lt;!&ndash; Custom styles for this template &ndash;&gt;
+    &lt;!&ndash;<link href="starter-template.css" rel="stylesheet">&ndash;&gt;
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    &lt;!&ndash; Just for debugging purposes. Don't actually copy these 2 lines! &ndash;&gt;
+    &lt;!&ndash;[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]&ndash;&gt;
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+    &lt;!&ndash; HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries &ndash;&gt;
+    &lt;!&ndash;[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <![endif]&ndash;&gt;
 </head>
 <body>
 <div class="container">
@@ -40,6 +73,7 @@
          <li role="presentation" class="active"><a href="#">Home</a></li>
          <li role="presentation"><a href="#">Profile</a></li>
          <li role="presentation"><a href="#">Messages</a></li>
+        <li role="presentation"><a href="#">About me</a></li>
     </ul>
     </div>
 </nav>
@@ -60,26 +94,39 @@
         <li class="list-group-item">Morbi leo risus</li>
         <li class="list-group-item">Porta ac consectetur ac</li>
         <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    </div>
-    <div class="container">
-    {% if blogs %}
-        <ur>
+        {% if blogs %}
+
             {% for blog in blogs %}
-                <li>
-                    {{ blog.title }}
+                <li class="list-group-item">
                     <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
                 </li>
             {% endfor %}
-        </ur>
-    {% else %}
-        <p>No blog are available.</p>
-    {% endif %}
+
+        {% else %}
+         <p>No blog are available.</p>
+        {% endif %}
+    </ul>
     </div>
+
+    <center>
+     <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-github"></a>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
+                    <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>
+            </p>
+            <p>Powered by <a href="#">czqsole</a>. Copyright &copy; 2016. [<a href="/manage/" target="_blank">Manage</a>]</p>
+            <p><a href="" target="_blank">www.czqsole.com</a>. All rights reserved.</p>
+         </div>
+     </nav>
+    </center>
 </body>
 </html>
 
-<!--
+&lt;!&ndash;
 li: 列表
 a: 连接
- -->
+ &ndash;&gt;
+-->
