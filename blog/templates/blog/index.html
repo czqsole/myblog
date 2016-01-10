@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/blog/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<div>
+<div class="container">
     <h1>czqsole的Blog</h1>
 </div>
+
+<nav class="nav nav-primary">
+    <div class="container">
+    <ul class="nav nav-pills">
+         <li role="presentation" class="active"><a href="#">Home</a></li>
+         <li role="presentation"><a href="#">Profile</a></li>
+         <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+    </div>
+</nav>
+
+	<div id="main" class="container">
+		<div id="content-sidebar-wrap">
+			  <div id="content">
+				<div class="breadcrumb">
+                    当前位置&nbsp;：&nbsp;首页
+                </div>
+                  </div>
+            </div>
+        </div>
+    <div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    </div>
+    <div class="container">
     {% if blogs %}
         <ur>
             {% for blog in blogs %}
@@ -20,6 +75,7 @@
     {% else %}
         <p>No blog are available.</p>
     {% endif %}
+    </div>
 </body>
 </html>
 

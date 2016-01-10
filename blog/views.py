@@ -19,3 +19,6 @@ def detail(request, blog_id):
 
 def create_blog(request):
     return render(request, 'blog/create.html')
+
+def show_boot_test(request):
+    return render(request, 'blog/boot_test.html')
