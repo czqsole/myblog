@@ -23,9 +23,11 @@
                     <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
 
 
-                <div id="blogs">
+                <div class="blog">
                     <header>
-
+                        <h2>
+                            {{ blog.title }}
+                        </h2>
                     </header>
                     <div class="entry-content">
                         <p>
@@ -36,7 +38,7 @@
                         <div class="entry-info">
 			                <span class="entry-date">
                                 <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-				                    2016年1月10日
+				                    {{ blog.pub_time }}
 			                </span>
                             <span class="author vcard">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
