@@ -20,13 +20,12 @@
 
             {% for blog in blogs %}
                 <li class="list-group-item">
-                    <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
 
 
                 <div class="blog">
                     <header>
                         <h2>
-                            {{ blog.title }}
+                            <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
                         </h2>
                     </header>
                     <div class="entry-content">
