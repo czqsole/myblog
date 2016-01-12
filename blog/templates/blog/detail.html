@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
+{% block path %}
+<div class="container">
+    <div class="breadcrumb">
+        当前位置&nbsp;：&nbsp;首页
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
+
     <div class="article">
         <h2>
             {{ blog.title }}
@@ -9,6 +18,7 @@
             {{ blog.article }}
         </p>
     </div>
+
 {% endblock %}
 <!--
 <!DOCTYPE html>
