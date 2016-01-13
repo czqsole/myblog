@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block path %}
+<!--{% block path %}
 <div class="container">
     <div class="breadcrumb">
         当前位置&nbsp;：&nbsp;首页
     </div>
 </div>
-{% endblock %}
+{% endblock %}-->
 
 {% block content %}
 
@@ -14,9 +14,15 @@
         <h2 class="article-title">
             {{ blog.title }}
         </h2>
-        <p>
-            {{ blog.article }}
-        </p>
+        <div class="article-content">
+            <p>
+                {{ blog.article }}
+             </p>
+        </div>
+        <footer class="article-footer">
+
+        </footer>
+
     </div>
 
 {% endblock %}
