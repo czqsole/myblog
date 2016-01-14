@@ -8,7 +8,7 @@
 </div>
 {% endblock %}-->
 {% block content %}
-<div class="layout">
+
 
     <div class="layout-right">
         <p>
@@ -21,12 +21,17 @@
         {% for blog in blogs %}
             <div class="article-pre">
                 <header class="article-pre-header">
-                    {{ blog.title }}
+                    <h3>
+                        <a href="blog/{{ blog.id }}/">{{ blog.title }}</a>
+                    </h3>
                 </header>
                 <div class="article-pre-content">
                     <p>
                         {{ blog.article }}
                     </p>
+                </div>
+                <div class="article-pre-footer">
+
                 </div>
             </div>
         {% endfor %}
@@ -37,7 +42,7 @@
             2333
         </p>
     </div>
-</div>
+
 <!--<div class="container">
     <ul class="list-group">
         <li class="list-group-item">Cras justo odio</li>
