@@ -22,3 +22,6 @@ def create_blog(request):
 
 def show_boot_test(request):
     return render(request, 'blog/boot_test.html')
+
+def show_mark(request):
+    return render(request, 'blog/mark_test.html')
